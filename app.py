@@ -17,7 +17,7 @@ class Handler(BaseHTTPRequestHandler):
   <p><b>Hostname do container:</b> {socket.gethostname()}</p>
   <p><b>Hora do servidor:</b> {datetime.now():%d/%m/%Y %H:%M:%S}</p>
   <p><b>Caminho pedido:</b> {self.path}</p>
-  <p>Sérgio Ribeiro</p> 
+  <p>Sérgio Ribeiro da Silva Peixoto</p> 
 </body>
 </html>
 """.encode("utf-8")

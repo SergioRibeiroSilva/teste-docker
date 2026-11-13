@@ -1,10 +1,13 @@
 services:
   web:
-    build: .                # constrói a imagem a partir do Dockerfile
-    image: demo-docker-web  # nome da imagem gerada
+    build: . # constrói a imagem a partir do Dockerfile
+    image: demo-docker-web # nome da imagem gerada
     container_name: demo-web
     ports:
-      - "8080:8000"         # porta 8080 do seu PC -> porta 8000 do container
+      - "8080:8000" # porta 8080 do seu PC -> porta 8000 do container
+    volumes:
+      - .:/app
+    command: sh -c "pip install watchfiles && watchfiles 'python app.py'"
     environment:
-      - MESSAGE=Container funcionando!
+      - MESSAGE=Container funcionando...!
     restart: unless-stopped
