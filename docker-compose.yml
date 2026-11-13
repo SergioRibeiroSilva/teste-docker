@@ -9,5 +9,5 @@ services:
       - .:/app
     command: sh -c "pip install watchfiles && watchfiles 'python app.py'"
     environment:
-      - MESSAGE=Container funcionando...!
+      - MESSAGE=Testando variável local no Docker Desktop!
     restart: unless-stopped
